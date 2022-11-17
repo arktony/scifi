@@ -8,7 +8,7 @@
         <h3>Add New Plant</h3>
         <div class="container">
             <div class="row">
-                <div class="col-md-8 mx-auto">
+                <div class="col-md-8 mx-auto div-new">
                     <p th:text="${message}" th:if="${message != null}" class="alert alert-primary"></p>
                     <form method="post" th:action="@{/addNewPlant}" th:object="${plant}" enctype="multipart/form-data">
                         <div class="form-group">

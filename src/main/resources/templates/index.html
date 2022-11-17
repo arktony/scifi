@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" layout:decorate="~{layout}"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="en" layout:decorate="~{layout}" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:th="http://www.thymeleaf.org">
+
 <body>
-<div layout:fragment="content">
-<section class="my-5">
-    <div class="container">
-        <div class="row">
-            <div th:each="plant : ${plants}" class="col-md-12 mx-auto">
-                <img class="col-md-4" th:src="@{${plant.id}}" alt=""  src=""/>
-                <p th:text="${plant.scientificName}"></p>
-                <p th:text="${plant.englishName}"></p>
-                <p th:text="${plant.localName}"></p>
-                <p th:text="${plant.narration}"></p>
+    <div layout:fragment="content">
+        <section class="my-5">
+            <div class="container">
+                <div class="row">
+                    <div th:each="plant : ${plants}" class="col-md-3 col-sm-6 item">
+                        <div class="card item-card card-block">
+                            <img class="col-md-4" th:src="@{${plant.id}}" alt="" src="" />
+                            <h5 class="item-card-title mt-3 mb-3" th:text="${plant.scientificName}">
+                                </h4>
+                                <p th:text="${plant.englishName}"></p>
+                                <p th:text="${plant.localName}"></p>
+                                <p class="card-text" th:text="${plant.narration}"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
-</section>
-</div>
 </body>
+
 </html>
