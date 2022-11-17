@@ -3,6 +3,7 @@ package com.plant.io.scifi.controller;
 import com.plant.io.scifi.entity.ImageModel;
 import com.plant.io.scifi.entity.Plant;
 import com.plant.io.scifi.repository.ImageRepo;
+import com.plant.io.scifi.service.ImageService;
 import com.plant.io.scifi.service.PlantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -25,6 +26,9 @@ public class PlantController {
 
     @Autowired
     private ImageRepo imageRepo;
+
+    @Autowired
+    private ImageService imageService;
 
     @GetMapping(value = {"/addPlant"})
     public String index(Plant plant, Model model){
@@ -67,7 +71,6 @@ public class PlantController {
 
     @GetMapping(value = {"/"})
     public String showAll(Model model){
-        Plant plant = new Plant();
         List<Plant> allPlants =plantService.getAllActivePlants();
         model.addAttribute("plants", allPlants);
         return "index";
