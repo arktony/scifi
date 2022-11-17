@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Plants</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+<section class="my-5">
+    <div class="container">
+        <div class="row">
+            <div th:each="plant : ${plants}" class="col-md-12 mx-auto">
+                <img class="col-md-4" th:src="@{${plant.id}}" alt=""  src=""/>
+                <p th:text="${plant.scientificName}"></p>
+                <p th:text="${plant.englishName}"></p>
+                <p th:text="${plant.localName}"></p>
+                <p th:text="${plant.narration}"></p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

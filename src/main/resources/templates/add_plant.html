@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Plants</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+<section class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>Upload Image Data</h2>
+                <p th:text="${message}" th:if="${message != null}" class="alert alert-primary"></p>
+                <form method="post" th:action="@{/addNewPlant}" th:object="${plant}" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="scientificName">Scientific Name</label>
+                        <input type="text" id="scientificName" name="scientificName" class="form-control-file">
+                    </div>
+                    <div class="form-group">
+                        <label for="englishName">English Name</label>
+                        <input type="text" id="englishName" name="englishName" class="form-control-file">
+                    </div>
+                    <div class="form-group">
+                        <label for="localName">Local Name</label>
+                        <input type="text" id="localName" name="localName" class="form-control-file">
+                    </div>
+                    <div class="form-group">
+                        <label for="narration">Narration</label>
+                        <input type="text" id="narration" name="narration" class="form-control-file">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageFile">Plant Image</label>
+                        <input type="file" id="imageFile" name="imageFile" accept="image/*" class="form-control-file">
+                    </div>
+                    <button type="submit" class="btn">Upload Data</button>
+                </form>
+                <span th:if="${msg != null}" th:text="${msg}"></span>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
