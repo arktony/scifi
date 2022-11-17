@@ -7,11 +7,11 @@
         <section class="my-5">
             <div class="container">
                 <div class="row">
-                    <div th:each="plant : ${plants}" class="col-md-3 col-sm-6 item">
+                    <div th:each="plant : ${plants}" class="col-lg-6 col-sm-12 item">
                         <div class="card item-card card-block">
                             <img class="col-md-4" th:src="@{${plant.id}}" alt="" src="" />
                             <h5 class="item-card-title mt-3 mb-3" th:text="${plant.scientificName}">
-                                </h4>
+                                </h5>
                                 <p th:text="${plant.englishName}"></p>
                                 <p th:text="${plant.localName}"></p>
                                 <p class="card-text" th:text="${plant.narration}"></p>
