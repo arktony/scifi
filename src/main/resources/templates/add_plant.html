@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Plants</title>
-    <link rel="stylesheet" href="/new_plant.css">
-</head>
-
+<html lang="en" layout:decorate="~{layout}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
 <body>
+<div layout:fragment="content">
     <section class="my-5">
         <h3>Add New Plant</h3>
         <div class="container">
@@ -43,6 +39,7 @@
             </div>
         </div>
     </section>
+</div>
 </body>
 
 </html>
