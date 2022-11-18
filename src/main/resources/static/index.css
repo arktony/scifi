@@ -12,6 +12,7 @@ img {
 
 /* Remove extra left and right margins, due to padding */
 .row {
+    width: 100%;
     margin: 10px;
 }
 
