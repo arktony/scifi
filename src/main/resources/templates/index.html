@@ -11,11 +11,13 @@
                         <div class="card item-card">
                             <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg"
                                 alt="Photo of sunset">
+                           <div class="card-body">
                             <h5 class="card-title mt-3 mb-3" th:text="${plant.scientificName}">
                             </h5>
                             <p th:text="${plant.englishName}"></p>
                             <p th:text="${plant.localName}"></p>
                             <p class="card-text" th:text="${plant.narration}"></p>
+                           </div>
                         </div>
                     </div>
                 </div>

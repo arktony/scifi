@@ -59,6 +59,9 @@ img {
     color: #18d4ca;
 
 }
+.card-body{
+    padding: 5px;
+}
 
 .card:hover {
     transform: scale(1.05);
