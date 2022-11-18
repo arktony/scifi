@@ -1,9 +1,12 @@
+section{
+    align-items: center;
+}
+
 img {
     height: 150px;
     width: 100%;
 }
 
-/* Float four columns side by side */
 .col {
     position: relative;
     padding-right: 15px;
@@ -12,7 +15,6 @@ img {
     flex: 0 0 25%;
 }
 
-/* Remove extra left and right margins, due to padding */
 .row {
     display: flex;
     flex-wrap: wrap;
